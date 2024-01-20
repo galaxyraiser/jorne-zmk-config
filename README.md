@@ -5,4 +5,7 @@ Keymap editor source code: https://github.com/nickcoutsos/keymap-editor
 
 ### Compilation
 Just execute this line under zmk root.
-```west build -s app -d build/{right/left} -b nice_nano --pristine -- -DSHIELD=jorne_{right/left} -DZMK_CONFIG="/home/roman/projects/zmk/zmk-config/config"```
+```west build -s app -d build/{right/left} -b nice_nano --pristine -- -DSHIELD=jorne_{right/left} -DZMK_CONFIG="<config-dir-abs-path>/config"```
+
+### Edit keyboard settings
+```https://nickcoutsos.github.io/keymap-editor/```
