@@ -88,3 +88,5 @@ jobs:
         with:
           name: firmware
           path: build/artifacts
+          overwrite: true
+
