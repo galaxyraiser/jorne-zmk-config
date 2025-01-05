@@ -33,15 +33,15 @@
 
 
 &msc {
-    time-to-max-speed-ms = <80>;
+    time-to-max-speed-ms = <300>;
+    delay-ms = <0>;
     acceleration-exponent = <0>;
 };
 
 &mmv {
-    time-to-max-speed-ms = <120>;
-    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <500>;
+    delay-ms = <0>;
 };
-
 
 / {
     behaviors {
