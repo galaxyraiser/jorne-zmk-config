@@ -6,7 +6,7 @@
 
 #include "skeletyl_v2_elitec.dtsi"
 
-
+#ifdef CONFIG_ZMK_LOGGING
 &usbd {
     status = "okay";
     cdc_acm_uart: cdc_acm_uart {
@@ -20,3 +20,6 @@
         zephyr,console = &cdc_acm_uart;
     };
 };
+
+#endif
+
