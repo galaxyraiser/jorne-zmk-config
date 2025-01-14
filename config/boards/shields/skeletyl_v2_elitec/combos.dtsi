@@ -1,3 +1,10 @@
+/*
+    0   1   2   3   4            5   6   7   8   9
+    10  11  12  13  14           15  16  17  18  19
+    20  21  22  23  24           25  26  27  28  29
+            30  31  32           33  34  35
+*/
+
 compatible = "zmk,combos";
 
 #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TIMEOUT) \
@@ -6,6 +13,10 @@ compatible = "zmk,combos";
         key-positions = <KEYPOS>;               \
         layers = <LAYERS>;                      \
         timeout-ms = <TIMEOUT>;                 \
-        slow-release;                           \
     }
 
+COMBO(bt_sel0, &bt BT_SEL 0, 35 26, NAV, 1000);
+COMBO(bt_sel1, &bt BT_SEL 1, 35 27, NAV, 1000);
+COMBO(bt_sel2, &bt BT_SEL 2, 35 28, NAV, 1000);
+COMBO(bt_clr, &bt BT_CLR, 35 29, NAV, 1000);
+COMBO(out_tog, &out OUT_TOG, 35 25, NAV, 1000);
