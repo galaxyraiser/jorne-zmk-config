@@ -46,6 +46,9 @@
 #define LGUI_TAB  &mt LGUI TAB
 #define LCTRL_DEL &mt LCTRL DEL
 
+#define LALT_X      &mt LALT X
+#define LALT_DOT    &mt LALT DOT
+
 / {
     combos {
         #include "combos.dtsi"
@@ -58,7 +61,7 @@
             bindings = <
                         &kp Q       &kp W        &kp F        &kp P        &kp B               &kp J       &kp L         &kp U        &kp Y         &kp SEMI
                         &kp A       &kp R        &kp S        &kp T        &kp G               &kp M       &kp N         &kp E        &kp I         &kp O
-                        &kp Z       &kp X        &kp C        &kp D        &kp V               &kp K       &kp H         &kp COMMA    &kp DOT       &kp FSLH
+                        &kp Z       LALT_X       &kp C        &kp D        &kp V               &kp K       &kp H         &kp COMMA    LALT_DOT      &kp FSLH
                                                  &lt NAV ESC  LSHFT_SPC    LGUI_TAB            &lt SYM RET &lt NUM SPACE LCTRL_DEL
             >;
         };
@@ -68,16 +71,16 @@
                         &kp C_VOL_UP &none       &mmv MU     &none       &msc SU             &kp LC(Y)   &kp LC(V)   &kp LC(C)   &kp LC(X)   &kp LC(Z)
                         &kp C_VOL_DN &mmv ML     &mmv MD     &mmv MR     &msc SD             &kp LEFT    &kp LEFT    &kp UP      &kp RIGHT   &kp CAPS
                         &none        &msc ML     &none       &msc SR     &none               &kp INS     &kp HOME    &kp DOWN    &kp END     &kp PG_UP
-                                                 &mkp MB1    &mkp MB2    &none               &kp RET     &mkp MB1    &mkp MB2
+                                                 &mkp MB1    &trans      &trans              &kp RET     &mkp MB1    &mkp MB2
             >;
         };
 
         sym_layer {
             bindings = <
-                        &kp LBRC    &kp AMPS    &kp STAR    &kp LPAR   &kp RBRC             &none       &none       &none       &none       &none
-                        &kp COLON   &kp DLLR    &kp PRCNT   &kp CARET  &kp PLUS             &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
-                        &kp TILDE   &kp EXCL    &kp AT      &kp HASH   &kp PIPE             &none       &none       &none       &none       &none
-                                                &kp LPAR    &kp RPAR   &kp UNDER            &trans      &none       &none
+                        &none       &kp AMPS    &kp LPAR    &kp RPAR     &kp KP_PLUS         &none       &none       &none       &none       &none
+                        &kp COLON   &kp TILDE   &kp LBRC    &kp RBRC     &kp KP_MINUS        &kp EQUAL   &kp PIPE    &kp UNDER   &kp RALT    &kp RGUI
+                        &kp DLLR    &kp EXCL    &kp LBKT    &kp RBKT     &kp HASH            &none       &kp DLLR    &none       &none       &none
+                                                &trans      &trans       &trans              &trans      &none       &none
             >;
         };
 
@@ -85,10 +88,9 @@
             bindings = <
                         &kp LBKT    &kp N7      &kp N8      &kp N9     &kp RBKT             &none       &none       &none       &none       &none
                         &kp SQT     &kp N4      &kp N5      &kp N6     &kp EQUAL            &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
-                        &kp GRAVE   &kp N1      &kp N2      &kp N3     &kp BSLH             &bt BT_CLR  &bt BT_SEL 0 &none       &none       &none
+                        &kp GRAVE   &kp N1      &kp N2      &kp N3     &kp BSLH             &none       &none       &none       &none       &none
                                                 &kp DOT     &kp N0     &kp MINUS            &none       &trans      &none
             >;
         };
     };
 };
-

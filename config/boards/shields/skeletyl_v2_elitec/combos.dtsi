@@ -19,4 +19,4 @@ COMBO(bt_sel0, &bt BT_SEL 0, 35 26, NAV, 1000);
 COMBO(bt_sel1, &bt BT_SEL 1, 35 27, NAV, 1000);
 COMBO(bt_sel2, &bt BT_SEL 2, 35 28, NAV, 1000);
 COMBO(bt_clr, &bt BT_CLR, 35 29, NAV, 1000);
-COMBO(out_tog, &out OUT_TOG, 35 25, NAV, 1000);
+COMBO(boot, &bootloader, 35 25, NAV, 1000);
