@@ -12,7 +12,7 @@
 
 #include <input/processors.dtsi>
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1250  // default: 600
 #include <dt-bindings/zmk/pointing.h>
 
 #define BASE    0
@@ -38,8 +38,9 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <500>;
+    time-to-max-speed-ms = <200>;
     delay-ms = <0>;
+    acceleration-exponent = <1>;
 };
 
 #define LSHFT_SPC &mt LSHFT BSPC
@@ -69,17 +70,17 @@
         nav_layer {
             bindings = <
                         &kp C_VOL_UP &none       &mmv MU     &none       &msc SU             &kp LC(Y)   &kp LC(V)   &kp LC(C)   &kp LC(X)   &kp LC(Z)
-                        &kp C_VOL_DN &mmv ML     &mmv MD     &mmv MR     &msc SD             &kp LEFT    &kp LEFT    &kp UP      &kp RIGHT   &kp CAPS
-                        &none        &msc ML     &none       &msc SR     &none               &kp INS     &kp HOME    &kp DOWN    &kp END     &kp PG_UP
+                        &kp C_VOL_DN &mmv ML     &mmv MD     &mmv MR     &msc SD             &kp LEFT    &kp LEFT    &kp UP      &kp RIGHT   &none
+                        &none        &msc ML     &none       &msc SR     &none               &kp INS     &kp HOME    &kp DOWN    &kp END     &none
                                                  &mkp MB1    &trans      &trans              &kp RET     &mkp MB1    &mkp MB2
             >;
         };
 
         sym_layer {
             bindings = <
-                        &none       &kp AMPS    &kp LPAR    &kp RPAR     &kp KP_PLUS         &none       &none       &none       &none       &none
-                        &kp COLON   &kp TILDE   &kp LBRC    &kp RBRC     &kp KP_MINUS        &kp EQUAL   &kp PIPE    &kp UNDER   &kp RALT    &kp RGUI
-                        &kp DLLR    &kp EXCL    &kp LBKT    &kp RBKT     &kp HASH            &none       &kp DLLR    &none       &none       &none
+                        &none       &kp DLLR    &kp LPAR    &kp RPAR     &kp KP_PLUS         &kp PRCNT   &kp AT      &none       &none       &none
+                        &kp COLON   &kp TILDE   &kp LBRC    &kp RBRC     &kp KP_MINUS        &kp EQUAL   &kp PIPE    &kp UNDER   &kp STAR    &kp AMPS
+                        &none       &kp EXCL    &kp LBKT    &kp RBKT     &kp HASH            &kp CARET   &kp LT      &kp GT      &none       &none
                                                 &trans      &trans       &trans              &trans      &none       &none
             >;
         };
