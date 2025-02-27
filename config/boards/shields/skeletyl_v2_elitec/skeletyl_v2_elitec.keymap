@@ -50,6 +50,9 @@
 #define LALT_X      &mt LALT X
 #define LALT_DOT    &mt LALT DOT
 
+#define UP_PGUP     &mt PG_UP UP
+#define DN_PGDN     &mt PG_DN DOWN
+
 / {
     combos {
         #include "combos.dtsi"
@@ -70,8 +73,8 @@
         nav_layer {
             bindings = <
                         &kp C_VOL_UP &none       &mmv MU     &none       &msc SU             &kp LC(Y)   &kp LC(V)   &kp LC(C)   &kp LC(X)   &kp LC(Z)
-                        &kp C_VOL_DN &mmv ML     &mmv MD     &mmv MR     &msc SD             &kp LEFT    &kp LEFT    &kp UP      &kp RIGHT   &none
-                        &none        &msc ML     &none       &msc SR     &none               &kp INS     &kp HOME    &kp DOWN    &kp END     &none
+                        &kp C_VOL_DN &mmv ML     &mmv MD     &mmv MR     &msc SD             &kp LEFT    &kp LEFT    UP_PGUP     &kp RIGHT   &none
+                        &none        &msc ML     &none       &msc SR     &none               &kp INS     &kp HOME    DN_PGDN     &kp END     &none
                                                  &mkp MB1    &trans      &trans              &kp RET     &mkp MB1    &mkp MB2
             >;
         };
@@ -90,7 +93,7 @@
                         &kp LBKT    &kp N7      &kp N8      &kp N9     &kp RBKT             &none       &none       &none       &none       &none
                         &kp SQT     &kp N4      &kp N5      &kp N6     &kp EQUAL            &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
                         &kp GRAVE   &kp N1      &kp N2      &kp N3     &kp BSLH             &none       &none       &none       &none       &none
-                                                &kp DOT     &kp N0     &kp MINUS            &none       &trans      &none
+                                                &kp DOT     &kp N0     LGUI_TAB             &none       &trans      &none
             >;
         };
     };
