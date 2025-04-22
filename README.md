@@ -15,3 +15,8 @@ To enable debug console need to append this lines:
 ```
 
 This will inject cdc usb device to our dts.
+
+### Central side changed
+We need to reset nvs storage on both sides using special shield `-DSHIELD=settings_reset` instead of target one.
+Resulted image should be written to each side before target fw.
+
