@@ -1,18 +1,17 @@
 # Copyright (c) 2022 ZMK Contributors
 # SPDX-License-Identifier: MIT
- 
- 
+
 if SHIELD_SKELETYL_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Skeletyl"
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
+	default "Skeletyl Left"
 
 endif
 
 if SHIELD_SKELETYL_RIGHT
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
 
 config ZMK_KEYBOARD_NAME
 	default "Skeletyl Right"
@@ -23,5 +22,5 @@ if SHIELD_SKELETYL_LEFT || SHIELD_SKELETYL_RIGHT
 
 config ZMK_SPLIT
 	default y
-	
+
 endif
