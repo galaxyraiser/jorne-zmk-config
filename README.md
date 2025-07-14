@@ -2,6 +2,18 @@
 
 [Getting started](https://zmk.dev/docs/development/local-toolchain/setup/native)
 
+Current SDK version is 0.17.1. Just run install.sh to prepare the SDK on the host.
+
+# !!! The modern SDK versions have a new changes in picolib which cause compilation errors.
+https://forum.golioth.io/t/thingy91x-unable-to-build-examples-with-zephyr/1442/5
+
+# On the Arch, we have a problem with native dtc from sdk host tools:
+```
+pacman -S dtc
+rm -f ~//zephyr-sdk-0.17.0/sysroots/x86_64-pokysdk-linux/usr/bin/dtc
+ln -s /usr/bin/dtc ~/zephyr-sdk-0.17.0/sysroots/x86_64-pokysdk-linux/usr/bin/dtc
+```
+
 ### Build
 
 ```
@@ -18,5 +30,5 @@ This will inject cdc usb device to our dts.
 
 ### Central side changed
 We need to reset nvs storage on both sides using special shield `-DSHIELD=settings_reset` instead of target one.
-Resulted image should be written to each side before target fw.
+The provisioning image should be written to each side before target fw.
 
