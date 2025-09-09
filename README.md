@@ -2,7 +2,12 @@
 
 [Getting started](https://zmk.dev/docs/development/local-toolchain/setup/native)
 
-Current SDK version is 0.17.1. Just run install.sh to prepare the SDK on the host.
+Current SDK version is 0.17.0 due to bump of picolib in 0.17.1 which is causing compilation failure.
+
+```
+cd ~ && wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.17.0/zephyr-sdk-0.17.1_linux-x86_64.tar.xz && tar xvf zephyr-sdk-0.17.0_linux-x86_64.tar.xz
+zephyr-sdk-0.17.0/setup.sh
+```
 
 # !!! The modern SDK versions have a new changes in picolib which cause compilation errors.
 https://forum.golioth.io/t/thingy91x-unable-to-build-examples-with-zephyr/1442/5
