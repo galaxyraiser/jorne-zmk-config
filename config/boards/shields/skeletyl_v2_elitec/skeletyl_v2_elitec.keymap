@@ -43,9 +43,9 @@
     acceleration-exponent = <1>;
 };
 
-#define LSHFT_SPC &mt LSHFT BSPC
-#define LGUI_TAB  &mt LGUI TAB
-#define LCTRL_DEL &mt LCTRL DEL
+#define LSHFT_BSPC  &mt LSHFT BSPC
+#define LGUI_TAB    &mt LGUI TAB
+#define LCTRL_DEL   &mt LCTRL DEL
 
 #define LALT_X      &mt LALT X
 #define LALT_DOT    &mt LALT DOT
@@ -66,7 +66,7 @@
                         &kp Q       &kp W        &kp F        &kp P        &kp B               &kp J       &kp L         &kp U        &kp Y         &kp SEMI
                         &kp A       &kp R        &kp S        &kp T        &kp G               &kp M       &kp N         &kp E        &kp I         &kp O
                         &kp Z       LALT_X       &kp C        &kp D        &kp V               &kp K       &kp H         &kp COMMA    LALT_DOT      &kp FSLH
-                                                 &lt NAV ESC  LSHFT_SPC    LGUI_TAB            &lt SYM RET &lt NUM SPACE LCTRL_DEL
+                                                 &lt NAV ESC  LSHFT_BSPC   LGUI_TAB            &lt SYM RET &lt NUM SPACE LCTRL_DEL
             >;
         };
 
@@ -84,7 +84,7 @@
                         &none       &kp DLLR    &kp LPAR    &kp RPAR     &kp KP_PLUS         &kp PRCNT   &kp AT      &none       &none       &none
                         &kp COLON   &kp TILDE   &kp LBRC    &kp RBRC     &kp KP_MINUS        &kp EQUAL   &kp PIPE    &kp UNDER   &kp STAR    &kp AMPS
                         &none       &kp EXCL    &kp LBKT    &kp RBKT     &kp HASH            &kp CARET   &kp LT      &kp GT      &none       &none
-                                                &none       &none        &none               &trans      &none       &none
+                                                &none       &kp BSPC     &none               &trans      &none       &none
             >;
         };
 
