@@ -73,27 +73,27 @@
         nav_layer {
             bindings = <
                         &kp C_VOL_UP &none       &mmv MU     &none       &msc SU             &kp LC(Y)   &kp LC(V)   &kp LC(C)   &kp LC(X)   &kp LC(Z)
-                        &kp C_VOL_DN &mmv ML     &mmv MD     &mmv MR     &msc SD             &kp LEFT    &kp LEFT    UP_PGUP     &kp RIGHT   &none
-                        &none        &msc ML     &none       &msc SR     &none               &kp INS     &kp HOME    DN_PGDN     &kp END     &none
+                        &kp C_VOL_DN &mmv ML     &mmv MD     &mmv MR     &msc SD             &kp LEFT    &kp LEFT    &kp UP      &kp RIGHT   &none
+                        &none        &msc ML     &none       &msc SR     &none               &kp INS     &kp HOME    &kp DOWN    &kp END     &none
                                                  &none       &none       &none               &kp RET     &mkp MB1    &mkp MB2
             >;
         };
 
         sym_layer {
             bindings = <
-                        &none       &kp DLLR    &kp LPAR    &kp RPAR     &kp KP_PLUS         &kp PRCNT   &kp AT      &none       &none       &none
+                        &kp CARET   &kp DLLR    &kp LPAR    &kp RPAR     &kp KP_PLUS         &kp GRAVE   &kp AT      &kp DQT     &kp SQT     &none
                         &kp COLON   &kp TILDE   &kp LBRC    &kp RBRC     &kp KP_MINUS        &kp EQUAL   &kp PIPE    &kp UNDER   &kp STAR    &kp AMPS
-                        &none       &kp EXCL    &kp LBKT    &kp RBKT     &kp HASH            &kp CARET   &kp LT      &kp GT      &none       &none
+                        &kp PRCNT   &kp EXCL    &kp LBKT    &kp RBKT     &kp HASH            &none       &kp LT      &kp GT      &kp DOT     &kp BSLH
                                                 &none       &kp BSPC     &none               &trans      &none       &none
             >;
         };
 
         num_layer {
             bindings = <
-                        &kp LBKT    &kp N7      &kp N8      &kp N9     &kp RBKT             &none       &none       &none       &none       &none
-                        &kp SQT     &kp N4      &kp N5      &kp N6     &kp EQUAL            &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
-                        &kp GRAVE   &kp N1      &kp N2      &kp N3     &kp BSLH             &none       &none       &none       &none       &none
-                                                &kp DOT     &kp N0     LGUI_TAB             &none       &none      &none
+                        &kp LBKT    &kp N1      &kp N2      &kp N3     &kp RBKT             &none       &none       &none       &none       &none
+                        &kp SQT     &kp N4      &kp N5      &kp N6     &kp EQUAL            &none       &none       &none       &none       &none
+                        &kp GRAVE   &kp N7      &kp N8      &kp N9     &kp BSLH             &none       &none       &none       &none       &none
+                                                &kp DOT     &kp N0     LGUI_TAB             &none       &none       &none
             >;
         };
     };
