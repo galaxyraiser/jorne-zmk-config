@@ -5,6 +5,8 @@
  */
  
 #include "skeletyl_v2_elitec.dtsi"
+#include <dt-bindings/zmk/input_transform.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &default_transform {
 	col-offset = <5>;
@@ -46,21 +48,24 @@
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
 
-    trackball: pmw3389@0 {
-        compatible = "pixart,pmw3389";
-        spi-max-frequency = <2000000>; // 2MHZ
-        resolution = <800>; // TODO
+    touchpad: cirque@0 {
+        compatible = "cirque,pinnacle";
+        spi-max-frequency = <1000000>; //1MHZ
+        sensitivity = "4x";
+        no-taps;
+        rotate-90;
+        x-invert;
         status = "okay";
         reg = <0>;
-        irq-gpios = <&gpio0 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        dr-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH)>;
     };
     status = "okay";
 };
 
 / {
-  trackball_listener {
-    compatible = "zmk,input-listener";
-    device = <&trackball>;
-  };
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&touchpad>;
+        input-processors = <&zip_xy_scaler 2 1>;
+    };
 };
-
