@@ -12,7 +12,8 @@
 
 #include <input/processors.dtsi>
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1250  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL   1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL   20
 #include <dt-bindings/zmk/pointing.h>
 
 #define BASE    0
@@ -25,14 +26,14 @@
 #define MD MOVE_DOWN
 #define ML MOVE_LEFT
 #define MR MOVE_RIGHT
-#define SU MOVE_Y(ZMK_POINTING_DEFAULT_MOVE_VAL)
-#define SD MOVE_Y(-ZMK_POINTING_DEFAULT_MOVE_VAL)
-#define SR MOVE_X(ZMK_POINTING_DEFAULT_MOVE_VAL)
-#define SL MOVE_X(-ZMK_POINTING_DEFAULT_MOVE_VAL)
+#define SU MOVE_Y(ZMK_POINTING_DEFAULT_SCRL_VAL)
+#define SD MOVE_Y(-ZMK_POINTING_DEFAULT_SCRL_VAL)
+#define SR MOVE_X(ZMK_POINTING_DEFAULT_SCRL_VAL)
+#define SL MOVE_X(-ZMK_POINTING_DEFAULT_SCRL_VAL)
 
 
 &msc {
-    time-to-max-speed-ms = <300>;
+    time-to-max-speed-ms = <200>;
     delay-ms = <0>;
     acceleration-exponent = <0>;
 };
